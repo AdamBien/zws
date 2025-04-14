@@ -1,4 +1,4 @@
-# SaO.java
+# Zero Dependencies Web Server
 Serve and Open (the browser). A zero-dependency development webserver
 
 # Run
