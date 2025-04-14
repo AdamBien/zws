@@ -10,9 +10,9 @@ import java.nio.file.Path;
 import com.sun.net.httpserver.SimpleFileServer;
 import com.sun.net.httpserver.SimpleFileServer.OutputLevel;
 
-public class SaO {
+public class ZWS {
 
-    private static Logger LOG = System.getLogger(SaO.class.getName());
+    private static Logger LOG = System.getLogger(ZWS.class.getName());
 
     public static void main(String... args) throws IOException, InterruptedException {
         var port = 3000;
