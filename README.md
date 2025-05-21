@@ -6,6 +6,8 @@ Serve and Open (the browser). A zero-dependency development webserver
 1. You need: Java 21 or later (should also work with Java 18+, but keep it secret 😀).
 2. `curl -O  https://raw.githubusercontent.com/AdamBien/SaO.java/main/ZWS.java && java ZWS.java` (or clone this repo)
 
+You can also copy the files `ZWS.java` and `zws.sh` to a folder in your PATH.
+
 The server serves files from current directory and port 3000. Firefox browser opens on 
 `http://localhost:3000`.
 
