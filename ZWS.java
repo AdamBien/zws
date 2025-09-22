@@ -1,12 +1,7 @@
 import java.awt.Desktop;
-import java.lang.System.Logger;
-import java.lang.System.Logger.Level;
 
 import com.sun.net.httpserver.SimpleFileServer;
 import com.sun.net.httpserver.SimpleFileServer.OutputLevel;
-
-
-    private static Logger LOG = System.getLogger("ZWS");
 
     void main(String... args) throws IOException, InterruptedException {
         var port = 3000;
@@ -17,9 +12,9 @@ import com.sun.net.httpserver.SimpleFileServer.OutputLevel;
         var url = "http://%s:%d".formatted(
                 webServer.getAddress().getHostString(),
                 webServer.getAddress().getPort());
-        LOG.log(Level.INFO, url);
+       IO.println( url);
         Browser.open(url);
-        LOG.log(Level.INFO, "browser opened ");
+       IO.println( "browser opened ");
     }
 
 interface Browser {
