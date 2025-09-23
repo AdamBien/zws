@@ -7,7 +7,7 @@ void main(String... args) throws IOException, InterruptedException {
     var port = 3000;
     var loopback = new InetSocketAddress(InetAddress.getLoopbackAddress(), port);
     var directory = args.length > 0 ? args[0] : ".";
-    var path = Path.of(directory).toAbsolutePath();
+    var path = Path.of(directory).normalize().toAbsolutePath();
     var webServer = SimpleFileServer.createFileServer(loopback, path, OutputLevel.VERBOSE);
     webServer.start();
     var url = "http://%s:%d".formatted(
