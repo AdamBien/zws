@@ -6,12 +6,14 @@ import com.sun.net.httpserver.SimpleFileServer.OutputLevel;
 void main(String... args) throws IOException, InterruptedException {
     var port = 3000;
     var loopback = new InetSocketAddress(InetAddress.getLoopbackAddress(), port);
-    var path = Path.of(".").toAbsolutePath();
+    var directory = args.length > 0 ? args[0] : ".";
+    var path = Path.of(directory).toAbsolutePath();
     var webServer = SimpleFileServer.createFileServer(loopback, path, OutputLevel.VERBOSE);
     webServer.start();
     var url = "http://%s:%d".formatted(
             webServer.getAddress().getHostString(),
             webServer.getAddress().getPort());
+    IO.println("Serving files from: " + path);
     IO.println(url);
     Browser.open(url);
     IO.println("browser opened ");
