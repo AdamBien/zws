@@ -1,18 +1,28 @@
 # Zero Dependencies Web Server (ZWS)
-Serve and Open (the browser). A zero-dependency development webserver
 
-# Run
+A zero-dependency development web server that serves files and opens the browser automatically.
 
-1. You need: Java 25 or later.
-2. `curl -O  https://raw.githubusercontent.com/AdamBien/SaO.java/main/ZWS.java && java ZWS.java` (or clone this repo)
+## Prerequisites
 
-You can also copy the files `ZWS.java` and `zws.sh` to a folder in your PATH.
+Java 25 or later
 
-The server serves files from current directory and port 3000. Firefox browser opens on 
-`http://localhost:3000`.
+## Quick Start
 
+```bash
+curl -O https://raw.githubusercontent.com/AdamBien/SaO.java/main/ZWS.java && java ZWS.java
+```
 
-Test it with vanilla WebComponents: [https://github.com/AdamBien/bce.design](https://github.com/AdamBien/bce.design)
+Alternatively, clone this repository or copy `ZWS.java` and `zws.sh` to a directory in your PATH.
+
+## How It Works
+
+- Serves files from the current directory
+- Runs on port 3000
+- Automatically opens Firefox at `http://localhost:3000`
+
+## Example Projects
+
+Test ZWS with vanilla WebComponents: [bce.design](https://github.com/AdamBien/bce.design)
 
 # ZWS in action
 
