@@ -16,9 +16,15 @@ Alternatively, clone this repository or copy `ZWS.java` and `zws.sh` to a direct
 
 ## How It Works
 
-- Serves files from the current directory
+- Serves files from the current directory (or specify a custom root directory as an argument)
 - Runs on port 3000
 - Automatically opens Firefox at `http://localhost:3000`
+
+## Usage
+
+```bash
+java ZWS.java [root-directory]
+```
 
 ## Example Projects
 
