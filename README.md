@@ -9,16 +9,10 @@ Java 25 or later
 ## Quick Start
 
 ```bash
-curl -O https://raw.githubusercontent.com/AdamBien/SaO.java/main/ZWS.java && java ZWS.java
+curl -O https://raw.githubusercontent.com/AdamBien/zws/main/ZWS.java && java ZWS.java
 ```
 
-Alternatively, clone this repository or copy `ZWS.java` and `zws.sh` to a directory in your PATH.
-
-## How It Works
-
-- Serves files from the current directory (or specify a custom root directory as an argument)
-- Runs on port 3000
-- Automatically opens Firefox at `http://localhost:3000`
+Or clone this repository and copy `ZWS.java` to a directory in your PATH.
 
 ## Usage
 
@@ -26,11 +20,15 @@ Alternatively, clone this repository or copy `ZWS.java` and `zws.sh` to a direct
 java ZWS.java [root-directory]
 ```
 
+- Serves files from the current directory (or specified root)
+- Runs on port 3000
+- Opens Firefox at `http://localhost:3000`
+- Disables caching for development
+
 ## Example Projects
 
-Test ZWS with vanilla WebComponents: [bce.design](https://github.com/AdamBien/bce.design)
+[bce.design](https://github.com/AdamBien/bce.design) — vanilla WebComponents
 
-# ZWS in action
+## Demo
 
-
-[![Single File, Zero Installation, No Dependencies Java Web (Dev) Server](https://i.ytimg.com/vi/pkpaUHuT9Rg/mqdefault.jpg)](https://www.youtube.com/embed/pkpaUHuT9Rg?rel=0)
+[![ZWS Demo](https://i.ytimg.com/vi/pkpaUHuT9Rg/mqdefault.jpg)](https://www.youtube.com/watch?v=pkpaUHuT9Rg)
