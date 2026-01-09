@@ -9,20 +9,14 @@ Java 25 or later
 ## Quick Start
 
 ```bash
-curl -O https://raw.githubusercontent.com/AdamBien/zws/main/ZWS.java && java ZWS.java
+curl -O https://raw.githubusercontent.com/AdamBien/zws/main/zws && java zws [root-directory]
 ```
 
-Or clone this repository and copy `ZWS.java` to a directory in your PATH.
-
-## Usage
-
-```bash
-java ZWS.java [root-directory]
-```
+Or clone this repository and copy `zws` to a directory in your PATH.
 
 - Serves files from the current directory (or specified root)
 - Runs on port 3000
-- Opens Firefox at `http://localhost:3000`
+- Opens the default browser at `http://localhost:3000`
 - Disables caching for development
 
 ## Example Projects
