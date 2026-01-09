@@ -1,3 +1,5 @@
+#!/usr/bin/env java --source 25
+
 import java.awt.Desktop;
 
 import module jdk.httpserver;
