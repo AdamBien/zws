@@ -1,4 +1,4 @@
-#!/usr/bin/env java --source 25
+#!/usr/bin/env -S java --source 25
 
 import java.awt.Desktop;
 
