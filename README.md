@@ -1,6 +1,6 @@
 # Zero Dependencies Web Server (ZWS)
 
-A zero-dependency development web server that serves files and opens the browser automatically.
+Development web server in a single Java source file on top of the JDK's built-in `jdk.httpserver`: serves static files, disables caching, and opens the browser automatically.
 
 ## Prerequisites
 
@@ -9,15 +9,27 @@ Java 25 or later
 ## Quick Start
 
 ```bash
-curl -O https://raw.githubusercontent.com/AdamBien/zws/main/zws && java zws [root-directory]
+curl -O https://raw.githubusercontent.com/AdamBien/zws/main/zws
+chmod +x zws
+./zws [root-directory]
 ```
 
-Or clone this repository and copy `zws` to a directory in your PATH.
+The file has no `.java` extension, so launching it with `java` directly requires the source flag: `java --source 25 zws [root-directory]` — or use `zws.sh`, which does exactly that. Copy `zws` and `zws.sh` to a directory in your PATH for system-wide use.
 
-- Serves files from the current directory (or specified root)
-- Runs on port 3000
-- Opens the default browser at `http://localhost:3000`
-- Disables caching for development
+- Serves files from the current directory (or the specified root)
+- Listens on `http://localhost:3000` (loopback only)
+- Opens the default browser
+- Sends no-cache headers on every response
+
+## Single Page Applications
+
+Pass `--single` to serve SPAs with client-side routing:
+
+```bash
+./zws [root-directory] --single
+```
+
+GET requests for paths that do not exist on disk and have no file extension (client-side routes like `/add`) are answered with `index.html`, so deep links and reloads reach the application. Requests with a file extension (assets) still return 404, keeping typos visible.
 
 ## Example Projects
 
