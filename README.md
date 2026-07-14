@@ -31,6 +31,16 @@ Pass `--single` to serve SPAs with client-side routing:
 
 GET requests for paths that do not exist on disk and have no file extension (client-side routes like `/add`) are answered with `index.html`, so deep links and reloads reach the application. Requests with a file extension (assets) still return 404, keeping typos visible.
 
+## Live Reload
+
+Pass `--live` to reload connected browsers on file changes:
+
+```bash
+./zws [root-directory] --live
+```
+
+The site root is watched recursively, and served HTML pages get a one-line script injected before the closing `body` tag that listens on the `/reload` [server-sent events](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events) endpoint and calls `location.reload()` on every change — pure web standards, no WebSockets, no client library. `--live` composes with `--single`: SPA-fallback responses reload too.
+
 ## Example Projects
 
 [bce.design](https://github.com/AdamBien/bce.design) — vanilla WebComponents
