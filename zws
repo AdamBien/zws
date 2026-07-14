@@ -6,7 +6,10 @@ import module jdk.httpserver;
 import com.sun.net.httpserver.SimpleFileServer.OutputLevel;
 
 
+static final String VERSION = "2026.07.14.01";
+
 void main(String... args) throws Exception{
+    IO.println("zws " + VERSION);
     var port = 3000;
     var loopback = new InetSocketAddress(InetAddress.getLoopbackAddress(), port);
     var arguments = List.of(args);
@@ -94,8 +97,8 @@ record SinglePageHandler(HttpHandler handler, Path root) implements HttpHandler 
  */
 record LiveReloadHandler(HttpHandler handler, Path root, boolean single) implements HttpHandler {
 
-    static final String SCRIPT =
-            "<script>new EventSource(\"/reload\").onmessage = () => location.reload()</script>";
+    static final String SCRIPT = """
+            <script>new EventSource("/reload").onmessage = () => location.reload()</script>""";
 
     @Override
     public void handle(HttpExchange exchange) throws IOException {
