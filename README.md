@@ -45,6 +45,10 @@ The site root is watched recursively, and served HTML pages get a one-line scrip
 
 [bce.design](https://github.com/AdamBien/bce.design) — vanilla WebComponents
 
+ZWS is also bundled as the local dev server in [airails.dev](https://airails.dev) skills.
+
 ## Demo
 
 [![ZWS Demo](https://i.ytimg.com/vi/pkpaUHuT9Rg/mqdefault.jpg)](https://www.youtube.com/watch?v=pkpaUHuT9Rg)
+
+powered by [airhacks.industries](https://airhacks.industries)
